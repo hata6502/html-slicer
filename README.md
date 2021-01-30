@@ -17,6 +17,8 @@
 
 ### ✨ [Demo](https://hata6502.github.io/slice-html/)
 
+![demo](https://user-images.githubusercontent.com/7702653/106356332-3601a180-6342-11eb-8438-ea5aee3b5f9f.png)
+
 ## Install
 
 ```sh
