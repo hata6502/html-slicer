@@ -28,6 +28,7 @@ yarn add slice-html
 ## Usage
 
 Please see [demo HTML](https://github.com/hata6502/slice-html/blob/main/docs/index.html).
+`sliceHTML()` is similar to [String.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice).
 
 ## Build
 
