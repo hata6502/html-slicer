@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>slice-html</title>
+  </head>
+
+  <body>
+    <form id="form">
+      input HTML:
+
+      <!-- prettier-ignore -->
+      <div
+        id="input-html"
+        contenteditable="true"
+        style="border: 1px solid #cccccc; padding: 8px"
+      ><!--
+      --><b>test</b> slice-html <i>test</i><!--
+    --></div>
+
+      <br />
+
+      <label for="start-input">start offset: </label>
+      <input id="start-input" type="number" />
+
+      <label for="end-input">end offset: </label>
+      <input id="end-input" type="number" />
+
+      <input type="submit" value="Slice" />
+    </form>
+
+    <br />
+    sliced HTML:
+
+    <div id="sliced-html" style="border: 1px solid #cccccc; padding: 8px"></div>
+
+    <!-- For demo -->
+    <script src="https://cdn.jsdelivr.net/npm/slice-html@latest"></script>
+    <!-- For development -->
+    <!--<script src="../dist/index.js"></script>-->
+
+    <script>
+      const endInput = document.querySelector("#end-input");
+      const form = document.querySelector("#form");
+      const inputHTML = document.querySelector("#input-html");
+      const slicedHTML = document.querySelector("#sliced-html");
+      const startInput = document.querySelector("#start-input");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const start =
+          startInput.value === "" ? undefined : Number(startInput.value);
+
+        const end = endInput.value === "" ? undefined : Number(endInput.value);
+
+        const slicedDocumentFragment = SliceHTML.sliceHTML(
+          inputHTML,
+          start,
+          end
+        );
+
+        slicedHTML.innerHTML = "";
+        slicedHTML.append(slicedDocumentFragment);
+      });
+    </script>
+  </body>
+</html>
