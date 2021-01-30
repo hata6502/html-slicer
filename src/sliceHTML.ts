@@ -68,6 +68,7 @@ const extractHTMLByOffset = ({
   end: number;
 }) => {
   const clonedNode = node.cloneNode(true);
+
   const startPosition = detectPositionByOffset({
     node: clonedNode,
     offset: start,
