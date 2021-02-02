@@ -21,8 +21,16 @@
 
 ## Install
 
+### Install via yarn
+
 ```sh
 yarn add slice-html
+```
+
+### Load from CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/slice-html@latest"></script>
 ```
 
 ## Usage
